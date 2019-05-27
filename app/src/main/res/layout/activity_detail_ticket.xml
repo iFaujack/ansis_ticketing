@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailTicketActivity">
+    <androidx.appcompat.widget.Toolbar
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:id="@+id/toolbar"
+    android:background="@color/colorPrimary">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ID TICKET HERE"
+        android:textSize="@dimen/_20sdp"
+        android:id="@+id/dt_idticket"
+        android:fontFamily="@font/regular"
+        android:textColor="@color/base_white"
+        android:textAlignment="center"
+        android:padding="@dimen/_20sdp"/>
+</androidx.appcompat.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/layoutComment"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/_5sdp"
+            android:id="@+id/ticket_content">
+            <LinearLayout
+                android:id="@+id/viewForeground"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/_4sdp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="PT Sekar Arta Sentosa"
+                        android:fontFamily="@font/regular"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_16ssp"
+                        android:id="@+id/dt_realname"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Internet Down"
+                        android:id="@+id/dt_title"
+                        android:fontFamily="@font/regular"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_12ssp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Dear All, Tolong di cek untuk internet adasdas"
+                        android:maxLines="1"
+                        android:id="@+id/dt_desc"
+                        android:fontFamily="@font/regular"
+                        android:textSize="@dimen/_10ssp"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="22 Feb 2019"
+                        android:id="@+id/dt_date"
+                        android:gravity="end|center_vertical"
+                        android:fontFamily="@font/regular"
+                        android:textSize="@dimen/_8ssp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/dt_time"
+                        android:text="22:11"
+                        android:gravity="end|center_vertical"
+                        android:fontFamily="@font/regular"
+                        android:textSize="@dimen/_8ssp"
+                        android:layout_marginBottom="@dimen/_3sdp"/>
+                    <ImageView
+                        android:id="@+id/dt_ivStatus"
+                        android:layout_gravity="right"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/closed"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@id/ticket_content"
+            android:paddingHorizontal="@dimen/_6sdp"
+            android:id="@+id/dt_rv_comment">
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutComment"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingBottom="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_2sdp"
+        android:layout_alignParentBottom="true">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Reply here"
+            android:id="@+id/dt_edt_reply"
+            android:fontFamily="@font/regular"
+            android:layout_alignParentTop="true"
+            android:textSize="@dimen/_15ssp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@color/basegreen"
+            android:textColor="@color/base_white"
+            android:text="Reply"
+            android:fontFamily="@font/regular"
+            android:id="@+id/dt_btn_reply"
+            android:layout_below="@id/dt_edt_reply"
+            android:layout_alignParentRight="true"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

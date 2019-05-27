@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dt_list_background">
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        app:cardCornerRadius="@dimen/_5sdp"
+        android:elevation="@dimen/_5sdp"
+        app:cardUseCompatPadding="true"
+        android:background="@drawable/curve_edittext"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/_5sdp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_2sdp"
+            android:id="@+id/dt_foreground"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pendosa"
+                android:id="@+id/dt_tv_realname"
+                android:textSize="@dimen/_14sdp"
+                android:fontFamily="@font/regular"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="tanggal dan jam"
+                android:id="@+id/dt_tv_datetime"
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/regular"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/dt_tv_description"
+                android:text="wiajwejaw shakw oajwoeja "
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/regular"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/_10sdp">
+
+    <RelativeLayout
+        android:id="@+id/viewBackground"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@color/bg_row_delete">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="Close"
+            android:paddingRight="@dimen/_8sdp"
+            android:textSize="@dimen/_20ssp"
+            android:textColor="@color/base_white"
+            android:fontFamily="@font/regular"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/viewForeground"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:orientation="horizontal"
+        android:background="@color/base_white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PT Sekar Arta Sentosa"
+                android:fontFamily="@font/regular"
+                android:textStyle="bold"
+                android:textSize="@dimen/_16ssp"
+                android:id="@+id/tl_realname"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Internet Down"
+                android:id="@+id/tl_title"
+                android:fontFamily="@font/regular"
+                android:textStyle="bold"
+                android:textSize="@dimen/_12ssp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dear All, Tolong di cek untuk internet adasdas"
+                android:maxLines="1"
+                android:id="@+id/tl_desc"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/_10ssp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:paddingVertical="@dimen/_5sdp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="22 Feb 2019"
+                android:id="@+id/tl_date"
+                android:gravity="end|center_vertical"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/_8ssp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tl_time"
+                android:text="22:11"
+                android:gravity="end|center_vertical"
+                android:fontFamily="@font/regular"
+                android:textSize="@dimen/_8ssp"
+                android:layout_marginBottom="@dimen/_3sdp"/>
+            <ImageView
+                android:id="@+id/tl_ivStatus"
+                android:layout_gravity="right"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/closed"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</FrameLayout>
